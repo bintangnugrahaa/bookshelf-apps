@@ -339,7 +339,7 @@ button,
   .bookshelf-filter > #showInput > p {
     display: none;
   }
-  .app-footer {
+  footer.app-footer {
     text-align: center;
     padding: 10px;
     background-color: #0aaff1;
