@@ -1,52 +1,93 @@
-# Submission Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage
+# Submission Bookshelf Apps
 
-![Dicoding Indonesia Logo](assets/logo.png)
+Buatlah aplikasi web yang dapat memasukan data buku ke dalam rak, memindahkan data buku antar rak, dan menghapus data buku dari rak.
+Untuk lebih jelasnya, terdapat 5 kriteria utama pada Bookshelf Apps yang harus Anda buat.
 
-## Deskripsi Kelas
+### Kriteria 1: Mampu Menambahkan Data Buku
 
-**Belajar Membuat Front-End Web untuk Pemula**
+- Bookshelf Apps harus mampu menambahkan data buku baru.
+- Data buku yang disimpan merupakan objek JavaScript dengan struktur berikut:
 
-Disusun oleh: Dicoding Indonesia
-Level: Pemula
+```javascript
+  {
+  id: string | number,
+  title: string,
+  author: string,
+  year: number,
+  isComplete: boolean,
+}
+```
 
-Kelas ini ditujukan untuk seorang Front-End Web Developer yang ingin mengembangkan website yang memiliki fungsionalitas lebih daripada hanya media informasi saja, sesuai dengan standar industri. Di akhir kelas, siswa dapat membuat aplikasi front-end web yang interaktif serta memiliki fitur penyimpanan menggunakan web storage.
+Berikut contoh data riilnya:
 
-## Materi yang dipelajari
+```javascript
+  {
+  id: 3657848524,
+  title: 'Harry Potter and the Philosopher\'s Stone',
+  author: 'J.K Rowling',
+  year: 1997,
+  isComplete: false,
+}
+```
 
-### 1. Browser Object Model dan Document Object Model (DOM)
+Catatan:
 
-- Mempelajari penerapan BOM dan DOM pada halaman website.
-- Teknik pemanipulasian DOM menggunakan JavaScript.
-- Durasi: 7 jam 55 menit
+> Untuk id buku pada tiap buku yang disimpan haruslah unik. Tips dalam menetapkan nilai untuk adalah Anda bisa memanfaatkan nilai timestamp. Untuk mendapatkan nilai timestamp di JavaScript cukup mudah, cukup dengan menuliskan expressions +new Date().
 
-### 2. Interaktif dengan Event
+### Kriteria 2: Memiliki Dua Rak Buku
 
-- Mempelajari penerapan event dalam menciptakan interaktifitas pada HTML element.
-- Durasi: 10 jam 45 menit
+- Bookshelf Apps harus memiliki 2 Rak buku. Yakni, “Belum selesai dibaca” dan “Selesai dibaca”.
+- Rak buku "Belum selesai dibaca" hanya menyimpan buku jika properti isComplete bernilai false.
+- Rak buku "Selesai dibaca" hanya menyimpan buku jika properti isComplete bernilai true.
 
-### 3. Penyimpanan Data dengan Web Storage
+### Kriteria 3: Dapat Memindahkan Buku antar Rak
 
-- Mempelajari API browser yang berguna untuk penyimpanan data melalui Web Storage.
-- Mengenai tipe-tipe storage beserta penerapannya.
-- Durasi: 8 jam 25 menit
+- Buku yang ditampilkan pada rak, baik itu "Belum selesai dibaca" maupun "Selesai dibaca" harus dapat dipindahkan di antara keduanya.
 
-## Evaluasi Pembelajaran
+### Kriteria 4: Dapat Menghapus Data Buku
 
-Submission (proyek akhir) membuat sebuah website yang menerapkan teknik manipulasi DOM dan web storage.
+- Buku yang ditampilkan pada rak, baik itu "Belum selesai dibaca" maupun "Selesai dibaca" harus dapat dihapus.
 
-Total jam yang dibutuhkan untuk menyelesaikan kelas ini, mulai dari persiapan kelas sampai evaluasi belajar, adalah 45 jam.
+### Kriteria 5: Manfaatkan localStorage dalam Menyimpan Data Buku
 
-## Cara Menggunakan Proyek
+- Data buku yang ditampilkan pada rak, baik itu "Belum selesai dibaca" maupun "Selesai dibaca" harus dapat bertahan walaupun halaman web ditutup.
+- Dengan begitu, Anda harus menyimpan data buku pada localStorage.
 
-1. Clone repositori ini ke komputer Anda.
-2. Buka proyek di editor kode favorit Anda.
-3. Jalankan aplikasi di browser dengan membuka file `index.html`.
+## Penilaian Submission
 
-## Catatan
+Submission Anda akan dinilai oleh Tim Reviewer guna menentukkan kelulusan Anda. Untuk lulus dari kelas ini, proyek Bookshelf Apps harus memenuhi seluruh kriteria yang telah disebutkan pada bagian Kriteria Bookshelf Apps. Submission Anda akan dinilai oleh Tim Reviewer dengan skala 1-5. Untuk mendapatkan nilai tinggi, silakan penuhi saran-saran berikut ini:
 
-- Pastikan Anda memiliki pengetahuan dasar tentang HTML, CSS, dan JavaScript sebelum mengikuti kelas ini.
-- Untuk informasi lebih lanjut tentang kelas ini, kunjungi [Dicoding](https://www.dicoding.com/).
+- Tambahkan fitur pencarian untuk mem-filter buku yang ditampilkan pada rak sesuai dengan title buku yang dituliskan pada kolom pencarian.
+- Berkreasilah dengan membuat proyek Bookshelf Apps tanpa menggunakan project starter.
+- Menuliskan kode dengan bersih.
+  - Bersihkan comment dan kode yang tidak digunakan.
+  - Indentasi yang sesuai.
+- Terdapat improvisasi fitur seperti (pilih satu):
+  - Custom Dialog ketika menghapus buku.
+  - Dapat edit buku.
 
-## Lisensi
+Berikut adalah detail penilaian submission:
 
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file [LICENSE](LICENSE) untuk detailnya.
+1. Bintang satu : Semua ketentuan terpenuhi, namun terdapat indikasi kecurangan dalam mengerjakan submission.
+2. Bintang dua : Semua ketentuan terpenuhi, namun terdapat kekurangan pada penulisan kode.
+3. Bintang tiga : Semua ketentuan terpenuhi, namun tidak terdapat improvisasi atau saran yang dipenuhi.
+4. Bintang empat : Semua ketentuan terpenuhi dan menerapkan minimal satu saran yang diberikan.
+5. Bintang lima : Semua ketentuan terpenuhi dan menerapkan seluruh saran yang diberikan.
+
+Catatan:
+
+> Jika submission Anda ditolak maka tidak ada penilaian. Kriteria penilaian bintang di atas hanya berlaku jika submission Anda lulus.
+
+### Hasil Penilaian
+
+Terpenuhi:
+
+- [x] Mampu Menambahkan Data Buku baru.
+- [x] Memiliki minimal Dua Rak Buku. Yakni “Belum selesai dibaca” dan “Selesai dibaca”.
+- [x] Dapat Memindahkan Buku antar Rak.
+- [x] Dapat Menghapus Data Buku.
+- [x] Manfaatkan localStorage dalam Menyimpan Data Buku
+- [x] Aplikasi dapat berfungsi dengan baik (tidak terdapat bug, tidak mengalami force close, fungsionalitas aplikasi berjalan dengan baik).
+
+**Rating Submission Anda**:
+⭐⭐⭐⭐ (4/5)
