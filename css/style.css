@@ -298,8 +298,8 @@ button,
   padding: 10px;
   background-color: #0aaff1;
   color: #fff;
-  position: absolute;
-  bottom: 0;
+  position: relative;
+  margin-bottom: -30em;
   width: 100%;
 }
 
@@ -333,6 +333,16 @@ button,
   .filter-book > p {
     display: none;
   }
+  footer.app-footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0aaff1;
+    color: #fff;
+    position: relative;
+    margin-bottom: -30em;
+    width: 100%;
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -347,6 +357,6 @@ button,
     position: relative;
     margin-bottom: -30em;
     width: 100%;
-    font-size: 14px; /* Mengubah ukuran teks */
+    font-size: 14px;
   }
 }
