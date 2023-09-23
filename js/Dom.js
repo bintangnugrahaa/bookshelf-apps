@@ -1,7 +1,7 @@
 const addBook = () => {
   const title = document.getElementById("inputBookTitle").value;
   const author = document.getElementById("inputBookAuthor").value;
-  const year = document.getElementById("inputBookYear").value;
+  const year = parseInt(document.getElementById("inputBookYear").value);
   const isCompleted = document.getElementById("inputBookIsComplete").checked;
   const object = {
     id: +new Date(),
